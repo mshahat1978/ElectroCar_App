@@ -1,6 +1,6 @@
 class AssetsManager {
   static const String base = "assets/images";
-  static const String logo = "$base/SplashLogo.png";
+  static const String logo = "$base/SplashLogoOld.png";
   static const String onBoarding1 = '$base/onboarding1.png';
   static const String onBoarding2 = '$base/onboarding2.png';
   static const String onBoarding3 = '$base//onboarding3.png';

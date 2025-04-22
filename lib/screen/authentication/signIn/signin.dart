@@ -24,7 +24,7 @@ class _SignInState extends State<SignIn> {
         children: [
           Expanded(flex: 2, child: Image.asset(AssetsManager.logo)),
           Expanded(
-            flex: 3,
+            flex: 4,
             child: Padding(
               padding: REdgeInsets.symmetric(horizontal: 16.0),
               child: Column(

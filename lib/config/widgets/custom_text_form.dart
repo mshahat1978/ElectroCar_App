@@ -7,7 +7,8 @@ class CustomTextFormField extends StatelessWidget {
     required this.prefixIcon,
     this.suffixIcon,
     this.isSecureText = false,
-    this.onSuffixIconPressed = null,
+    this.onSuffixIconPressed,
+    this.keyboardType = TextInputType.text,
   });
 
   final String label;
@@ -15,11 +16,13 @@ class CustomTextFormField extends StatelessWidget {
   final IconData? suffixIcon;
   final bool isSecureText;
   final VoidCallback? onSuffixIconPressed;
+  final TextInputType? keyboardType;
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
         obscureText: isSecureText,
+        keyboardType: keyboardType,
         decoration: InputDecoration(
           labelText: label,
           prefixIcon: Icon(prefixIcon),
