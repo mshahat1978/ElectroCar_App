@@ -13,20 +13,56 @@ class MainLayout extends StatefulWidget {
 
 class _MainLayoutState extends State<MainLayout> {
   int selectedIndex = 0;
-  List<Widget> tabs = [
-    const charging(),
-    const Maintenance(),
-    const Sales(),
-    const Settings()
-  ];
+  List<Widget> tabs = [Charging(), Maintenance(), Sales(), const Settings()];
+  String userName = "Mohammed Ahmed ";
+  String userStatus = "Connected";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: tabs[selectedIndex],
       appBar: AppBar(
-        title: const Text("Register"),
+        backgroundColor: const Color.fromARGB(255, 11, 45, 88),
+        title: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'Welcome Back ✨',
+              style: TextStyle(fontSize: 14.0),
+            ),
+            Text(
+              userName,
+              style: const TextStyle(color: Colors.white, fontSize: 16.0),
+            ),
+            Text(
+              userStatus,
+              style: const TextStyle(color: Colors.white, fontSize: 14.0),
+            ),
+          ],
+        ),
+        leading: const Padding(
+          padding: EdgeInsets.all(8.0),
+          child: CircleAvatar(
+            backgroundColor: Color.fromARGB(255, 40, 92, 115),
+            backgroundImage: AssetImage('assets/images/UserLogo.png'),
+          ),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.more_vert,
+              color: Colors.white,
+            ),
+          ),
+        ],
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(20),
+          ),
+        ),
       ),
+      body: tabs[selectedIndex],
       bottomNavigationBar: _buildBottomNavigationBar(),
     );
   }

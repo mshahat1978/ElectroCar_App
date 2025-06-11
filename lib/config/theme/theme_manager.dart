@@ -7,14 +7,11 @@ class ThemeManager {
   static final ThemeData light = ThemeData(
     primaryColor: ColorsManager.blue,
     appBarTheme: AppBarTheme(
-      color: ColorsManager.white,
-      foregroundColor: ColorsManager.black10,
       titleTextStyle: GoogleFonts.roboto(
         fontSize: 22.sp,
         fontWeight: FontWeight.normal,
-        color: ColorsManager.black,
+        color: Colors.yellow,
       ),
-      centerTitle: true,
       iconTheme: IconThemeData(color: ColorsManager.black),
     ),
     scaffoldBackgroundColor: ColorsManager.light,
