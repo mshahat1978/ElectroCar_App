@@ -15,7 +15,7 @@ class ElectroApp extends StatelessWidget {
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         onGenerateRoute: RoutesManager.router,
-        initialRoute: RoutesManager.mainLayout,
+        initialRoute: RoutesManager.signUp,
         theme: ThemeManager.light,
         darkTheme: ThemeManager.dark,
         themeMode: ThemeMode.light,
