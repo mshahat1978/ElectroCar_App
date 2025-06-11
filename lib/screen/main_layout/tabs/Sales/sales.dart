@@ -15,12 +15,32 @@ class Sales extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemBuilder: (context, index) =>
-          CategoryWidget(categoryItem: dataItemList[index]),
-      itemCount: dataItemList.length,
-      padding: const EdgeInsets.all(1),
-      // scrollDirection: Axis.horizontal ,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Container(
+          margin: const EdgeInsets.all(5),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+          decoration: BoxDecoration(
+              color: const Color.fromRGBO(210, 13, 240, 1.0),
+              borderRadius: BorderRadius.circular(8)),
+          child: const Text(
+            'Sales Points',
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 18, color: Colors.white),
+          ),
+        ),
+        Expanded(
+          child: ListView.builder(
+            itemBuilder: (context, index) =>
+                CategoryWidget(categoryItem: dataItemList[index]),
+            itemCount: dataItemList.length,
+            padding: const EdgeInsets.all(1),
+            // scrollDirection: Axis.horizontal ,
+          ),
+        ),
+      ],
     );
   }
 }

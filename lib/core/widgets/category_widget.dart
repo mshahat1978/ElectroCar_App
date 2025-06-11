@@ -14,12 +14,13 @@ class CategoryWidget extends StatelessWidget {
       decoration: BoxDecoration(
         shape: BoxShape.rectangle,
         color: const Color.fromRGBO(238, 238, 232, 1.0),
-        border: Border.all(color: Colors.grey, width: 2),
+        border: Border.all(
+            color: const Color.fromRGBO(238, 238, 232, 1.0), width: 1),
         borderRadius: BorderRadius.circular(20),
       ),
       margin: const EdgeInsets.all(5),
       child: Stack(
-        alignment: Alignment.bottomCenter,
+        alignment: Alignment.bottomLeft,
         children: [
           ImageWidget(imagePath: categoryItem.imagePath),
           TitleWidget(title: categoryItem.s_Name),

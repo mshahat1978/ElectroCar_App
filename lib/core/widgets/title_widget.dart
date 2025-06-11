@@ -8,36 +8,16 @@ class TitleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.all(1),
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 1),
+      margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 5),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
       decoration: BoxDecoration(
-          color: const Color.fromRGBO(96, 130, 182, 1.0),
-          borderRadius: BorderRadius.circular(8)),
+          color: const Color.fromRGBO(13, 202, 240, 0.7),
+          borderRadius: BorderRadius.circular(9)),
       child: Text(
         title,
-        style: const TextStyle(
-            fontSize: 18, color: Colors.white, fontWeight: FontWeight.normal),
+        style: const TextStyle(fontSize: 16, color: Colors.white),
       ),
     );
   }
 }
-
-/*
-Expanded(
-      child: Container(
-          margin: const EdgeInsets.all(1),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8),
-            color: const Color.fromRGBO(11, 45, 88, 1.0),
-          ),
-          alignment: Alignment.center,
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-          child: Text(
-            title,
-            style: const TextStyle(
-                color: Colors.white,
-                fontSize: 18,
-                fontWeight: FontWeight.w500),
-          )),
-    );
- */
+//color: const Color.fromRGBO(243, 119, 24, 1.0),

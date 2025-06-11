@@ -8,10 +8,17 @@ class ImageWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        foregroundDecoration: const BoxDecoration(
-      image: DecorationImage(
-          image: AssetImage('assets/images/services/6.jpg'), fit: BoxFit.fill),
-    ));
+      //width: double.infinity,
+      height: 150,
+      margin: const EdgeInsets.all(4),
+      //padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        image: DecorationImage(
+          fit: BoxFit.fitWidth,
+          image: AssetImage(imagePath),
+        ),
+      ),
+    );
   }
 }
-// child: Image.asset(imagePath),

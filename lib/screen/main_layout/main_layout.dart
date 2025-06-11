@@ -13,8 +13,7 @@ class MainLayout extends StatefulWidget {
 
 class _MainLayoutState extends State<MainLayout> {
   int selectedIndex = 0;
-  List<Widget> tabs = [charging(), Maintenance(), Sales(), const Settings()
-  ];
+  List<Widget> tabs = [Charging(), Maintenance(), Sales(), const Settings()];
   String userName = "Mohammed Ahmed ";
   String userStatus = "Connected";
 
